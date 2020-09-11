@@ -1,0 +1,27 @@
+{
+  "name": "slowloris-desktop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --no-sandbox",
+    "build": "electron-packager . --overwrite"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^9.0.0"
+  },
+  "dependencies": {
+    "@anzerr/slowloris.tool": "^1.0.10",
+    "axios": "^0.20.0",
+    "electron-packager": "^15.1.0"
+  }
+}
