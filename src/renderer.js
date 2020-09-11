@@ -63,13 +63,10 @@ const onSearch = async (event, inputConfig) => {
         url: window.url + searchedUrl,
     })
 
-    const [
-    ,, rawServer
-    ] = data.split("\n");
+    const serverConfig = data.split("\n");
 
-    const server = rawServer?.split?.(": ")?.pop?.() || ""
+    const isServerVuln = serverConfig.find(config => config.toLowerCase().match("apache"));
 
-    const isServerVuln = server.toLowerCase().match("apache");
 
     changeBorderColor("name", isServerVuln);
     changeBorderColor("packets", isServerVuln);
